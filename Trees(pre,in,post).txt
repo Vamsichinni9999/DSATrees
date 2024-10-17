@@ -1,0 +1,85 @@
+#preorder
+class TreeNode:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+def PreorederTraversal(node):
+    if node is None:
+        return 
+    print(node.data,end=",")
+    PreorederTraversal(node.left)
+    PreorederTraversal(node.right)
+root=TreeNode(1)
+A=TreeNode(2)
+B=TreeNode(3)
+C=TreeNode(4)
+D=TreeNode(5)
+E=TreeNode(5)
+F=TreeNode(6)
+root.left=A
+root.right=B
+A.left=C
+A.right=D
+B.left=E
+B.right=F
+PreorederTraversal(root)
+
+
+#inorder
+class TreeNode:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+def inorederTraversal(node):
+    if node is None:
+        return 
+    inorederTraversal(node.left)
+    print(node.data,end=",")
+    inorederTraversal(node.right)
+root=TreeNode(1)
+A=TreeNode(2)
+B=TreeNode(3)
+C=TreeNode(4)
+D=TreeNode(5)
+E=TreeNode(5)
+F=TreeNode(6)
+root.left=A
+root.right=B
+A.left=C
+A.right=D
+B.left=E
+B.right=F
+inorederTraversal(root)
+
+
+#postorder
+class TreeNode:
+    def __init__(self,data):
+        self.data=data
+        self.left=None
+        self.right=None
+def postorederTraversal(node):
+    if node is None:
+        return 
+    postorederTraversal(node.left)
+    postorederTraversal(node.right)
+    print(node.data,end=",")
+root=TreeNode(1)
+A=TreeNode(2)
+B=TreeNode(3)
+C=TreeNode(4)
+D=TreeNode(5)
+E=TreeNode(5)
+F=TreeNode(6)
+root.left=A
+root.right=B
+A.left=C
+A.right=D
+B.left=E
+B.right=F
+postorederTraversal(root)
+
+    
+    
