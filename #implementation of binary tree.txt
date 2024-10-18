@@ -1,0 +1,19 @@
+#implementation of binary tree
+class TreeNode:
+    def __init__(self,value):
+        self.left=None
+        self.right=None
+        self.value=value
+root=TreeNode(1)
+nodeA=TreeNode(2)
+nodeB=TreeNode(3)
+nodeC=TreeNode(4)
+nodeD=TreeNode(5)
+nodeE=TreeNode(6)
+root.left=nodeB
+root.right=nodeA
+nodeA.left=nodeC
+nodeA.right=nodeD
+nodeB.left=nodeD
+nodeB.right=nodeE
+print(root.right.right.value)
